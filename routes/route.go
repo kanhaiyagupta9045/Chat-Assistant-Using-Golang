@@ -7,5 +7,6 @@ import (
 )
 
 func FileRoutes(router *gin.Engine) {
-	router.POST("/upload",controllers.FileUpload())
+	router.POST("/upload", controllers.FileUpload())
+	router.POST("/query", controllers.ChatController())
 }

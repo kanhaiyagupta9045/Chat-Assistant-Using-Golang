@@ -42,7 +42,7 @@ func ChatAssistant(filename string, filecontent []byte, assistantName, assistant
 
 	_, err = client.CreateMessage(context.Background(), thread.ID, openai.MessageRequest{
 		Role:    string(openai.ThreadMessageRoleUser),
-		Content: "Please provide the ats score of the resume",
+		Content: content,
 	})
 	if err != nil {
 		return "", fmt.Errorf("failed to create message: %w", err)
